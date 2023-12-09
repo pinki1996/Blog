@@ -198,6 +198,46 @@ app.delete("/delete/:id", function(request, response)
 })
 
 
+//create Like Schema
+
+
+const likeSchema =  new Mongoose.Schema({
+    userEmail:String,
+    postId:String,
+    like:Number
+})
+const CreateLikeData = Mongoose.model("like",likeSchema)
+
+
+app.post("/create/like", function(request, response)
+{
+    //collect json data which is comming from the frontend
+    
+    const message = request.body.message
+    if(message)
+    {
+        const CreateLikeSave = new  CreateLikeData({
+            userEmail:message.email,
+            postId:message.postId,
+            like:1
+        })
+        CreateLikeSave.save()
+        .then((res)=>{
+            console.log("data is saved")
+        })
+        .catch((error)=>{
+            console.log(error,"error")
+        })
+    }
+   
+    response.send("You task saved successfully!!"+message)
+})
+app.get("/like/data", async function(request, response){
+    const findSingup = await CreateLikeData.find()
+    response.send(findSingup)
+})
+
+
 //create Comment Schema
 
 
@@ -233,8 +273,8 @@ app.post("/create/comment", function(request, response)
        
     }
     response.send("You task saved successfully!!"+message)
-    
 })
+
 
 
 app.get("/comment/data", async function(request, response){
