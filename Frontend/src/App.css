@@ -1,0 +1,109 @@
+*{
+  margin: 0 ;
+  padding: 0 ;
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+
+body{
+  background-color:lightblue;
+}
+.navbar-brand{
+  margin-left: 1rem;
+}
+.dropdown{
+  margin-right: 2rem;
+} 
+.container{
+  width: 100%;
+}
+.fa{
+  font-size: 2rem;
+  color: blue;
+  padding-left: 3rem;
+}
+.fa-plus-square{
+  color: white;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+.maindiv{
+  width: 40%;
+  margin: 1rem auto;
+  background-color: white;
+
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+h2{
+  background-color: blue;
+  color: white;
+  float: center;
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+}
+
+.form{
+  width: 100%;
+  padding-left: 5rem;
+}
+.label{
+  font-size: 1.5rem;
+  width: 70%;
+}
+.input{
+  font-size: 1.5rem;
+  width: 80%;
+  margin-bottom: 0.8rem;
+  text-decoration: none;
+  border: 1px solid black;
+}
+p{
+  margin-top: -10px;
+}
+button{
+  
+  background-color: blue;
+  border: none;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 10px;
+  width: 80%;
+  cursor: pointer;
+}
+
+.register{
+  display: flex;
+  justify-content: space-evenly;
+}
+.registerBtn{
+  color: blue;
+  text-decoration: none;
+}
+
+.card-text{
+  font-size: 1.2rem;
+}
+.col-sm-7{
+  margin: auto;
+}
+.comment{
+  background-color: whitesmoke;
+  display: flex;
+}
+.username{
+  margin-top:0.2rem ;
+  padding-right: 1rem;
+  color: blue;
+}
+.commentdata{
+  margin-top:0.2rem ;
+  color: black;
+}
+.commentBlog{
+  display: flex;
+}
+#inputComment{
+  width: 500rem;
+}
